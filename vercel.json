@@ -1,0 +1,19 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/notebooks/(.*).ipynb",
+      "headers": [
+        { "key": "Content-Type", "value": "application/x-ipynb+json" },
+        { "key": "Content-Disposition", "value": "attachment" }
+      ]
+    },
+    {
+      "source": "/reports/(.*).pdf",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" }
+      ]
+    }
+  ]
+}

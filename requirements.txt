@@ -1,0 +1,19 @@
+# Core analysis
+pandas>=2.1,<3.1
+numpy>=1.26,<2.6
+scikit-learn>=1.3,<1.10
+
+# Plotting (static figures used in PDF reports + notebook charts)
+matplotlib>=3.8,<3.12
+
+# Interactive dashboards (used only by src/build_dashboard*.py to regenerate the HTML)
+plotly>=5.20,<6.10
+
+# Notebook execution
+jupyter>=1.0
+nbformat>=5.9
+nbconvert>=7.14
+ipykernel>=6.29
+
+# PDF report generation (used only by src/build_report*.py)
+reportlab>=4.0,<5.1

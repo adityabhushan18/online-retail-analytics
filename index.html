@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Retail Analytics | Sales Performance & Customer Segmentation</title>
+<style>
+  :root { --bg:#f8fafc; --card:#ffffff; --ink:#0f172a; --muted:#64748b; --accent:#2563eb; --accent2:#7c3aed; --border:#e2e8f0; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: 'Segoe UI', Roboto, -apple-system, sans-serif; background:var(--bg); color:var(--ink); }
+  header { background:linear-gradient(135deg,#1e3a8a,#4c1d95); color:white; padding:56px 24px 48px; text-align:center; }
+  header h1 { margin:0 0 8px; font-size:34px; }
+  header p { margin:0; opacity:0.92; font-size:16px; }
+  .container { max-width:1000px; margin:-32px auto 0; padding:0 20px 60px; }
+  .cards { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:36px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:28px; box-shadow:0 4px 16px rgba(15,23,42,0.06); }
+  .card .tag { display:inline-block; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; font-weight:700; color:white; padding:4px 10px; border-radius:20px; margin-bottom:14px; }
+  .tag.task1 { background:var(--accent); }
+  .tag.task2 { background:var(--accent2); }
+  .card h2 { margin:0 0 10px; font-size:20px; }
+  .card p.desc { color:var(--muted); font-size:14.5px; line-height:1.55; margin:0 0 20px; }
+  .btn { display:inline-block; text-decoration:none; font-weight:600; font-size:14px; padding:11px 18px; border-radius:8px; color:white; margin-right:10px; margin-bottom:8px; }
+  .btn.primary.task1 { background:var(--accent); }
+  .btn.primary.task2 { background:var(--accent2); }
+  .btn.secondary { background:#eef2f7; color:var(--ink); border:1px solid var(--border); }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin:8px 0 40px; }
+  .kpi { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; text-align:center; }
+  .kpi .val { font-size:20px; font-weight:700; color:var(--accent); }
+  .kpi .lbl { font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:0.03em; margin-top:4px; }
+  .section-title { font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--muted); margin:36px 0 14px; }
+  footer { text-align:center; color:var(--muted); font-size:12.5px; padding:30px 20px 40px; }
+  @media (max-width: 720px) { .cards { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>📦 Online Retail Analytics</h1>
+  <p>Sales Performance &amp; Customer Segmentation Analysis</p>
+</header>
+
+<div class="container">
+
+  <div class="kpis">
+    <div class="kpi"><div class="val">£10.67M</div><div class="lbl">Total Revenue</div></div>
+    <div class="kpi"><div class="val">19,960</div><div class="lbl">Orders</div></div>
+    <div class="kpi"><div class="val">4,338</div><div class="lbl">Customers</div></div>
+    <div class="kpi"><div class="val">65.6%</div><div class="lbl">Repeat Purchase Rate</div></div>
+    <div class="kpi"><div class="val">8</div><div class="lbl">RFM Segments</div></div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <span class="tag task1">Task 1</span>
+      <h2>Sales Performance Dashboard</h2>
+      <p class="desc">Interactive analysis of revenue, orders, customers, products, regions and purchasing behavior.</p>
+      <a class="btn primary task1" href="dashboard/sales_dashboard.html">Open Sales Dashboard</a>
+      <a class="btn secondary" href="notebooks/Task1_Sales_Performance_Dashboard.ipynb" download>Task 1 Notebook</a>
+      <a class="btn secondary" href="reports/Sales_Business_Insights_Report.pdf">Sales Report</a>
+    </div>
+
+    <div class="card">
+      <span class="tag task2">Task 2</span>
+      <h2>Customer Segmentation Analysis</h2>
+      <p class="desc">RFM-based customer segmentation combined with K-Means clustering and business recommendations.</p>
+      <a class="btn primary task2" href="dashboard/customer_segmentation_dashboard.html">Open Customer Segmentation Dashboard</a>
+      <a class="btn secondary" href="notebooks/Task2_Customer_Segmentation_Analysis.ipynb" download>Task 2 Notebook</a>
+      <a class="btn secondary" href="reports/Customer_Segmentation_Report.pdf">Customer Segmentation Report</a>
+    </div>
+  </div>
+
+  <div class="section-title">About This Project</div>
+  <div class="card">
+    <p class="desc" style="margin-bottom:0;">
+      Built on the <a href="https://archive.ics.uci.edu/dataset/352/online+retail" target="_blank" rel="noopener">UCI Online Retail dataset</a>
+      (541,909 transactions, Dec 2010&ndash;Dec 2011, UK-based online gift retailer). Task 1 covers revenue trends,
+      top products, regional performance and day/hour purchasing patterns. Task 2 segments customers using
+      RFM (Recency, Frequency, Monetary) quintile scoring into 8 named segments, cross-checked against an
+      independent K-Means clustering model on log-transformed, standardized RFM values.
+      All charts, KPIs and reports on this site are generated directly from the notebooks in
+      <code>notebooks/</code> &mdash; nothing here is hand-typed.
+    </p>
+  </div>
+
+</div>
+
+<footer>Online Retail Analytics &middot; Data Analytics Portfolio Project &middot; Static site, no backend required</footer>
+</body>
+</html>
